@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "KoT Login Keeper",
+    "version": "1.0.1",
+
+    "description": "KOTで自動ログアウトを抑止する",
+
+    "icons": {
+        "16": "icons/kot_login_keeper.png",
+        "48": "icons/kot_login_keeper.png",
+        "128": "icons/kot_login_keeper.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://s3.kingtime.jp/admin*"],
+            "js": ["js/kot_login_keeper.js"],
+            "run_at": "document_end"
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/kot_login_keeper.png",
+            "24": "icons/kot_login_keeper.png",
+            "32": "icons/kot_login_keeper.png"
+        },
+        "default_title": "KoT Login Keeper"
+    }
+}
